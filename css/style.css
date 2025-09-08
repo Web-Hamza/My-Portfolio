@@ -406,19 +406,32 @@ section.contact .btn{
     font-weight: 700;
     background-color: aqua;
     border: 2px solid aqua;
+    margin-bottom: 10px;
     transition: 0.2s ease-in;
 }
 
 section.contact .btn:hover{
     
-    margin-top: 2rem;
-    width: 140px;
-    height: 50px;
-    font-size: 1rem;
-    font-weight: 700;
     background-color: white;
     border: 2px solid aqua;
 }
+
+
+section.contact .btn-1{
+    
+    margin-top: 2rem;
+    padding: 10px 20px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #000;
+    color: #fff;
+    border: 2px solid aqua;
+}
+
+
+
+
 
 
 /* footer  */
@@ -744,54 +757,53 @@ footer .copyright{
   }
 }
 
+/* ==================== Responsive Design form ==================== */
 
-@media (max-width: 1024px) {
-  form {
-    padding: 0 80px;
-  }
+@media (max-width: 992px) {
+    form {
+        padding: 0 50px;
+    }
+
+    section.contact .input-wrap {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    .btn-contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    section.contact .btn,
+    section.contact .btn-1 {
+        width: 100%;
+        max-width: 300px;
+        margin: 1 auto;
+    }
 }
 
-@media (max-width: 768px) {
-  form {
-    padding: 0 40px;
-  }
+@media (max-width: 576px) {
+    form {
+        padding: 0 20px;
+    }
 
-  section.contact .input-wrap {
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
-  }
+    section.contact input,
+    section.contact textarea {
+        font-size: 0.85rem;
+    }
 
-  section.contact .btn {
-    width: 100%;
-    max-width: 200px;
-  }
-}
+    section.contact .btn,
+    section.contact .btn-1 {
+        font-size: 0.9rem;
+        height: auto;
+        padding: 12px;
+    }
 
-@media (max-width: 480px) {
-  form {
-    padding: 0 20px;
-  }
-
-  section.contact .input-wrap {
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  }
-
-  section.contact input,
-  section.contact .input-wrap-2 input,
-  section.contact .input-wrap-2 textarea {
-    font-size: 0.85rem;
-  }
-
-  section.contact .btn {
-    width: 100%;
-    max-width: 180px;
-    font-size: 0.95rem;
-  }
-
-  .contact .container h1 {
-    font-size: 1.8rem;
-  }
+    .btn-contact {
+        gap: 1.5rem;
+    }
 }
 
 
@@ -826,3 +838,5 @@ footer .copyright{
 }
 
 /* End of CSS File */
+
+
